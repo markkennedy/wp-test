@@ -1,0 +1,36 @@
+{
+    "name": "mkennedy/wp-test",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Mark Kennedy",
+            "email": "mkennedy@fool.com"
+        }
+    ],
+    "require": {
+        "wpackagist-plugin/wp-migrate-db": "2.*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "wp-content/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
+            "wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
+    }
+}
